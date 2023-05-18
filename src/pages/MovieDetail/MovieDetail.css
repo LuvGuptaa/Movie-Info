@@ -195,5 +195,7 @@
     .synopsisText{
         font-size: 1rem;
     }
-    
+    .movie__links{
+        width: 90%;
+    }
 }
