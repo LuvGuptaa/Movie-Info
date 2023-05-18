@@ -4,12 +4,13 @@
     align-items: center;
     display: flex;
     justify-content:space-between;
+    margin-top: 30px;
 }
 
 .headerLeft, .headerRight {
     display: flex;
     align-items: center;
-
+    font-weight: 500;
 }
 
 a > span{
@@ -20,7 +21,7 @@ a > span{
 }
 
 a > span:hover {
-    color: yellow;
+    color: #DBA506;
 }
 
 .header-icon {
@@ -32,3 +33,19 @@ a > span:hover {
     font-size: 2rem;
 }
 
+
+.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    min-width: 100px;
+    padding: 10px;
+    background-color: #DBA506;
+    color: black;
+    border-radius: 5px;
+    font-weight: 600;
+}
+.active:hover {
+    color: black;
+}

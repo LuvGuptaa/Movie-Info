@@ -23,6 +23,7 @@ const Home = () => {
             transitionTime={3}
             infiniteLoop={true}
             showStatus={false}
+            useKeyboardArrows={true}
         >
             {
                 popularMovies.map(movie => (

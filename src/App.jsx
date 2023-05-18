@@ -12,7 +12,6 @@ function App() {
     <>
       <div className="App">
         <Router>
-          <Header />
             <Routes>
               <Route index element = {<Home />}></Route>
               <Route path="movie/:id" element={<MovieDetail />}></Route>
