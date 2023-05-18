@@ -15,6 +15,26 @@ const Home = () => {
         .then(data => setPopularMovies(data.results))
     }, [])
 
+    const [windowSize, setWindowSize] = useState(getWindowSize());
+
+    useEffect(() => {
+      function handleWindowResize() {
+        setWindowSize(getWindowSize());
+      }
+  
+      window.addEventListener('resize', handleWindowResize);
+  
+      return () => {
+        window.removeEventListener('resize', handleWindowResize);
+      };
+    }, []);
+  
+    function getWindowSize() {
+        const {innerWidth, innerHeight} = window;
+        return {innerWidth, innerHeight};
+    }
+
+    console.log(windowSize.innerWidth)
   return (
     <div className="poster">
         <Carousel 
@@ -24,6 +44,7 @@ const Home = () => {
             infiniteLoop={true}
             showStatus={false}
             useKeyboardArrows={true}
+            showIndicators={windowSize.innerWidth <=528 ? false : true}
         >
             {
                 popularMovies.map(movie => (
@@ -40,7 +61,7 @@ const Home = () => {
                                     <i className='fas fa-star' /> {" "}
                                 </span>
                             </div>
-                            <div className="posterImage__description">{movie ? movie.overview : ""}</div>
+                            <div className="posterImage__description">{windowSize.innerWidth <=528 ? movie.overview.slice(0,158)+"..." : movie.overview}</div>
                         </div>
                     </Link>
                 ))

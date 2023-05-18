@@ -92,8 +92,8 @@
     position: relative;
     bottom: 120px;
     display: flex;
-    justify-content: space-between;
-    width: 75%;
+    justify-content: space-evenly;
+    width: 50%;
 }
 
 .movie__heading {
@@ -162,5 +162,14 @@
         display: flex;
         position: relative;
         bottom: 225px;
+    }
+    .movie__genres {
+        margin: 1rem 0;
+    }
+    .movie__genre {
+        margin-right: .5rem;
+    }
+    .movie__links{
+        width: 75%;
     }
 }
