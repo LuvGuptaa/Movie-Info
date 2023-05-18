@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './MovieDetail.css'
 import { useParams } from 'react-router-dom'
-
+import Header from '../../components/Header/Header'
 
 const MovieDetail = () => {
 
@@ -23,6 +23,7 @@ const MovieDetail = () => {
   return (
         <div className="movie">
                 <div className="movie__intro">
+                <Header></Header>
                     <img className="movie__backdrop" src={`https://image.tmdb.org/t/p/original${currentMovieDetail ? currentMovieDetail.backdrop_path : ""}`} />
                 </div>
                 <div className="movie__detail">
