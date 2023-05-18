@@ -52,18 +52,27 @@
     width: 50%;
 }
 @media(max-width: 926px){
-    .posterImage__overlay{
-        position: absolute;
-        padding: 3rem;
-        bottom: 0px;
-        height: 50%;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        justify-content: flex-end;
-        align-items: flex-start;
-        background-image: linear-gradient(rgb(0,0,0,0), rgb(0,0,0,1));
-        opacity: 1;
-        transition: opacity .3s;
+    .posterImage{
+        height: 450px;
     }
+    .posterImage__overlay{
+        padding: 3rem;
+        height: 50%;
+    }
+    .posterImage__title {
+        font-weight: 900;
+        font-size: 2.7rem;
+        margin-bottom: 0.4rem;
+        text-align: left;
+    }
+    .posterImage__runtime {
+        font-size: 1.35rem;
+        margin-bottom: .7rem;
+    }
+    .posterImage__description {
+        width: 70%;
+    }
+}
+@media(max-width: 768px){
+    
 }
