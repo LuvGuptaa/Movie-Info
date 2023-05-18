@@ -72,7 +72,7 @@
 }
 @media(max-width: 458px){
     .posterImage{
-        height: 260px;
+        height: 235px;
     }
     .posterImage__overlay{
         padding: 1.5rem;
