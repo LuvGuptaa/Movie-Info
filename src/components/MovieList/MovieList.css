@@ -13,3 +13,11 @@ margin:  2.5rem;
     flex-wrap: wrap ;
     justify-content: center;
 }
+@media(max-width: 458px){
+    .movie__list{
+        padding: 0 1rem 2rem 1rem; 
+    }
+    .list__cards{
+        margin-top: 20px;
+    }
+}

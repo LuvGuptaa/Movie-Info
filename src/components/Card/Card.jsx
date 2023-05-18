@@ -12,13 +12,32 @@ const Card = ({movie}) => {
         }, 1000)
     }, []) 
 
+    const [windowSize, setWindowSize] = useState(getWindowSize());
+
+    useEffect(() => {
+      function handleWindowResize() {
+        setWindowSize(getWindowSize());
+      }
+  
+      window.addEventListener('resize', handleWindowResize);
+  
+      return () => {
+        window.removeEventListener('resize', handleWindowResize);
+      };
+    }, []);
+  
+    function getWindowSize() {
+        const {innerWidth, innerHeight} = window;
+        return {innerWidth, innerHeight};
+    }
+
     return <>
     {
         isLoading
         ?
         <div className="cards">
             <SkeletonTheme color="#202020" highlightColor="#444">
-                <Skeleton height={300} duration={2} />
+                <Skeleton height={windowSize.innerWidth >= 620 ? 300 : 200} duration={2} />
             </SkeletonTheme>
         </div>
         :
@@ -31,7 +50,7 @@ const Card = ({movie}) => {
                         {movie?movie.release_date:""}
                         <span className="card__rating">{movie?movie.vote_average:""}<i className="fas fa-star" /></span>
                     </div>
-                    <div className="card__description">{movie ? movie.overview.slice(0,118)+"..." : ""}</div>
+                    <div className="card__description">{windowSize.innerWidth >= 620 ? movie.overview.slice(0,118)+"..." : movie.overview.slice(0,38)+"..."}</div>
                 </div>
             </div>
         </Link>

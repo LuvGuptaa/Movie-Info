@@ -62,6 +62,15 @@
 }
 
 
-@media(max-width: 458px){
-    
+@media(max-width: 620px){
+    .cards {
+        min-width: 100px;
+        height: 200px;
+    }
+    .cards__img{
+        height: 200px;
+    }
+    .cards__overlay{
+        height: 190px;
+    }
 }
