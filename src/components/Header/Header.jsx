@@ -5,7 +5,6 @@ import { Link } from "react-router-dom"
 
 const Header = ({type}) => {
   
-
   return (
     <div className='header'>
         <div className="headerLeft">
@@ -13,7 +12,6 @@ const Header = ({type}) => {
             <Link to='/movies/popular' style={{textDecoration: "none"}}><span className={type === "popular" ? "active" : ""} >Popular</span></Link>
             <Link to='/movies/top_rated' style={{textDecoration: "none"}}><span className={type === "top_rated" ? "active" : ""}>Top-Rated</span></Link>
             <Link to='/movies/upcoming' style={{textDecoration: "none"}}><span className={type === "upcoming" ? "active" : ""}>Upcoming</span></Link>
-
         </div>
     </div>
   )

@@ -62,7 +62,7 @@
     margin: 1.25rem 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .movie__genre {
